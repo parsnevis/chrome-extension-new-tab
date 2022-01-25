@@ -1,0 +1,348 @@
+:root {
+  --color-light-sky-blue: #cee6ff;
+  --color-lightish-blue: #5281ff;
+  --color-tomato: #e34234;
+  --color-denim-blue: #3d518f;
+  --color-deep-sky-blue: #1a77f3;
+  --color-dirty-orange: #db800b;
+  --color-darkish-blue: #074096;
+  --color-sky-blue: #63a1ff;
+  --color-apricot: #ffbb63;
+  --color-greyish-brown: #4f4f4f;
+  --color-white-two: #d8d8d8;
+  --color-light-sage: #e2f7ec;
+  --color-jungle-green: #026834;
+  --color-hospital-green: #c0e9d4;
+  --color-white-three: #e8e8e8;
+  --color-greyish-brown-two: #494949;
+  --color-warm-grey: #929292;
+  --color-black-two: #202020;
+  --color-yellow-orange: #ffb602;
+  --color-light-blue-grey: #d9dff2;
+  --color-pale-grey: #e6eaf6;
+  --color-bluey-grey: #9da7c5;
+  --selected-background: "#c4def7";
+}
+
+.row-wm {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.calendar-box {
+  width: 85%;
+  display: flex;
+  height: 100%;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.calendar-small-box {
+  display: flex;
+  flex-direction: column;
+  padding-right: 2px;
+  /* margin-top: 3px; */
+}
+
+.jalali {
+  /* padding-top: 4px; */
+  font-family: BHoma;
+  font-weight: bold;
+  text-align: center;
+  color: #262626;
+  font-size: 1rem;
+}
+
+.gregorian-small {
+  font-family: peyda;
+  color: #969696;
+  padding-top: 3px;
+  /* padding: 0 3px 3px 0; */
+  float:right;
+  font-size: 80%;
+  font-weight: 400;
+  font-size: 0.7rem;
+  line-height: 0.9em;
+}
+
+.hijri-small {
+  font-family: TahaNaskh;
+  font-size: 1.3rem;
+  line-height: 0.6em;
+  color: #868686;
+  /* padding-top: 3px; */
+  float: left;
+  font-weight: 400;
+}
+
+.holiday {
+  color: #f00 !important;
+}
+
+
+.grid {
+  display: grid;
+}
+
+.grid-rows-6 {
+  grid-template-rows: repeat(6,minmax(0,1fr));
+}
+
+.grid-cols-7 {
+  grid-template-columns: repeat(7,minmax(0,1fr));
+}
+
+.grid-rows-4 {
+  grid-template-rows: repeat(4,minmax(0,1fr));
+}
+.grid-cols-3 {
+  grid-template-columns: repeat(3,minmax(0,1fr));
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+div.btn-icon {
+  display: flex;
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  color: var(--color-denim-blue);
+  font-size: 1.875rem;
+  line-height: 0.5em;
+  align-items: flex-end;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+
+.month-box .wrapper {
+  border: 1px solid var(--color-sky-blue);
+  border-radius: 5px;
+  background-color: rgba(243,244,246,1);
+  width: 95%;
+  margin: 5px 6px;
+  position: absolute;
+}
+
+.month-box {
+  position: relative;
+  width: 100%;
+  display: none;
+}
+
+.tooltip-arrow.popover-arrow {
+  border-width: 0 5px 5px 5px;
+  border-left-color: transparent!important;
+  border-right-color: transparent!important;
+  border-top-color: transparent!important;
+  left: calc(50% - -25px);
+  margin-top: 0;
+  margin-bottom: 0;
+  border-color: var(--color-sky-blue);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  position: absolute;
+  margin: 5px;
+  z-index: 1;
+  top: calc(-8.8%);
+}
+
+
+
+
+
+
+
+
+
+
+/* color */
+.color-denim-blue {
+  color: var(--color-denim-blue);
+}
+
+.text-gray {
+  color: var(--color-warm-grey);
+}
+
+
+/* positoins and display */
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+
+.right-1 {
+  right: 0.25rem;
+}
+
+.right-2 {
+  right: 0.5rem;
+}
+
+.right-3 {
+  right: 0.75rem;
+}
+
+.right-4 {
+  right: 1rem;
+}
+
+.right-5 {
+  right: 1.25rem;
+}
+
+
+.left-1 {
+  left: 0.25rem;
+}
+
+.left-2 {
+  left: 0.5rem;
+}
+
+.left-3 {
+  left: 0.75rem;
+}
+
+.left-4 {
+  left: 1rem;
+}
+
+.left-5 {
+  left: 1.25rem;
+}
+
+
+.top-1 {
+  top: 0.25rem;
+}
+
+.top-2 {
+  top: 0.5rem;
+}
+
+.top-3 {
+  top: 0.75rem;
+}
+
+.top-4 {
+  top: 1rem;
+}
+
+.top-5 {
+  top: 1.25rem;
+}
+
+
+.bottom-1 {
+  bottom: 0.25rem;
+}
+
+.bottom-2 {
+  bottom: 0.5rem;
+}
+
+.bottom-3 {
+  bottom: 0.75rem;
+}
+
+.bottom-4 {
+  bottom: 1rem;
+}
+
+.bottom-5 {
+  bottom: 1.25rem;
+}
+
+
+/* width & height */
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-9 {
+  width:2.25rem
+}
+
+.w-8 {
+  width:2rem
+}
+
+
+
+
+.font-light {
+  font-weight: 300;
+}
+
+.text-xs {
+  font-size: .75rem;
+  line-height: 1rem;
+}
+
+.ul-p-5 {
+  padding-inline-start: 5px;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+
+
+/* fonts */
+
+.peyda {
+  font-family: peyda;
+}
+
+.dast-nevis {
+  font-family: DastNevis;
+}
+
+.iran-yekan-web {
+  font-family: iran-yekan-web;
+}
+
+.homa {
+  font-family: Bhoma;
+}
+
+.roya {
+  font-family: BRoya;
+}
+
+.lotus {
+  font-family: BLotus;
+}
+
+.badr {
+  font-family: BBadr;
+}
+
+.yekan {
+  font-family: BYekan;
+}
+

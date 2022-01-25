@@ -4,9 +4,12 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: Peyda;
+  /* font-family: iranyekanwebregular; */
   background: url("../images/background.jpg") no-repeat center/cover;
 }
+
 body::before {
   content: "";
   position: absolute;
@@ -20,7 +23,7 @@ body::before {
 
 .calendar {
   position: relative;
-  width: 300px;
+  width: auto;
   background-color: #fff;
   box-sizing: border-box;
   box-shadow: 0 5px 50px rgba(0, 0, 0, 0.5);
@@ -30,7 +33,7 @@ body::before {
 
 .calendar__picture {
   position: relative;
-  height: 200px;
+  height: 100px;
   padding: 20px;
   color: #fff;
   background: #262626 url("../images/calendar-header.jpeg") no-repeat center/cover;
@@ -54,44 +57,49 @@ body::before {
   font-weight: 500;
 }
 
-.calendar__date {
+.calendar_day_header,
+.calendar_day_list {
   direction: rtl;
-  padding: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
-  grid-gap: 10px;
   box-sizing: border-box;
+}
+
+.calendar_day_header {
+  padding: 5px 5px 0px;
+}
+
+.calendar_day_list {
+    padding: 0px 10px 10px;
 }
 
 .calendar__day {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 25px;
+  height: 33.85px;
   font-weight: 600;
-  color: #262626;
-}
-.calendar__day:nth-child(7) {
-  color: #ff685d;
 }
 
 .calendar__number {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 25px;
+  height: 40px;
   color: #262626;
+  margin: 0.5px;
+  border-bottom: 0.5px solid var(--color-warm-grey);
 }
-.calendar__number:nth-child(7n) {
-  color: #ff685d;
-  font-weight: 700;
+.calendar__number:nth-child(7n), .calendar__number:nth-child(7n) * {
+  color: red !important;
 }
-.calendar__number--current, .calendar__number:hover {
-  background-color: #009688;
-  color: #fff !important;
-  font-weight: 700;
+.calendar__number--current {
+  border-bottom: 2px solid var(--color-denim-blue) !important;
+  /* border-radius: 4px; */
   cursor: pointer;
-  color: #0c4128;
 }
 
-/*# sourceMappingURL=styles.css.map */
+.calendar__number:hover {
+  cursor: pointer;
+}
+
+/* ## sourceMappingURL=styles.css.map */

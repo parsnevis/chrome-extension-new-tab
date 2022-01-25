@@ -1,64 +1,228 @@
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>Fancy Title</title>
   <meta name="description" content="Fancy description...">
-<!--  <script src="jquery.min.js" type="text/javascript"></script>-->
-<!--  <script src="lettering.js" type="text/javascript"></script>-->
-<!--  <link rel="stylesheet" href="fontawesome.min.css">-->
+  <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/jdf.js"></script>
+  <!--  <script type="text/javascript" src="assets/js/lettering.js"></script>-->
+  <script type="text/javascript" src="assets/js/header-script.js"></script>
+
+
+  <link rel="stylesheet" href="assets/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-rtl.min.css">
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/fonts-persian.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 
-<body>
-  <div class="calendar">
-    <div class="calendar__picture">
-      <h2>18, Sunday</h2>
-      <h3>November</h3>
+<body dir="rtl">
+
+  <div class="container-fluid h-100 pt-4 pb-4">
+
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-2">
+        <div class="row-wm">
+
+          <div class="col-md-5 bg-white rounded-lg ml-3">
+
+            <section>
+
+              <div class="row">
+                <div class="col-md-12 pt-2 pb-3 text-xs">
+                  <i class="fa fa-cog"></i>
+                  <span class="p-1">تهران</span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div id="current-time" class="h2 font-weight-bold color-denim-blue badr"></div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 p-2 text-center">
+                  <span class="text-xs">ظهر شد، بخوابیم 🌞</span>
+                </div>
+              </div>
+
+            </section>
+
+          </div>
+
+          <div class="col-md-5 bg-white rounded-lg">
+
+            <section>
+
+              <div class="row">
+                <div class="col-md-12 pt-2 pb-1 text-xs">
+                  <i class="fa fa-cog"></i>
+                  <span class="p-1">تهران</span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 p-2 pl-3">
+                  <div class="h4 font-weight-bold color-denim-blue mt-2">
+                    <span dir="ltr" class="font-medium text-2xl leading-none">8°C</span>
+                  </div>
+                </div>
+
+                <div class="col-md-6 p-2">
+                  <img src="./assets/images/cloud.svg" alt="weather icon" class="mb-2 w-9">
+                </div>
+
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 p-2 text-center">
+                  <span class="text-xs">شال‌گردن لازمه 🧣</span>
+                </div>
+              </div>
+
+            </section>
+
+          </div>
+
+        </div>
+
+        <div class="row-wm mt-3">
+          <div class="col-md-12">
+            <div class="row-wm bg-white rounded-lg pt-3 pb-3 current-date">
+
+              <div class="col-md-4 pr-1 current-jalali-date">
+                <div class="flex flex-col text-center font-weight-bold color-denim-blue">
+                  <span class="mb-1 current-year"></span>
+                  <span class="h4 font-black h-8 mt-1 mb-0 font-weight-bolder current-day"></span>
+                  <span class=" text-2xl font-medium current-month"></span>
+                </div>
+              </div>
+
+              <div class="col-md-8 pr-1">
+                <div class="mb-1 font-weight-bold color-denim-blue current-day-name">
+                  <span>امروز:&nbsp;&nbsp;&nbsp;&nbsp;</span><span></span></div>
+                <ul class="m-0 text-xs ul-p-5">
+                  <li class="mb-1 current-gregorian-date"></li>
+                  <li class="mb-1 current-hijri-date"></li>
+                  <li class="mb-1 text-sm font-normal current-gregorian-date-number"></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row-wm mt-3">
+          <div class="col-md-12">
+            <div class="calendar">
+              <div class="calendar__picture">
+                <!-- <h2 class="current__day">18, Sunday</h2>
+                <h3 class="current__month">November</h3> -->
+              </div>
+
+              <div class="calendar_option">
+                <div class="flex justify-around text-center font-weight-bold color-denim-blue mt-2">
+                  <div class="btn-icon btn-previous-month cursor-pointer">→</div>
+                  <div class="flex gap-3">
+                    <div class="v-popover">
+                      <div class="trigger" style="display: inline-block;">
+                        <div class="cursor-pointer">
+                          <span class="text-lg font-black month-boxer" data-month=""></span>
+                          <span class="text-xs"> ▼ </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="v-popover">
+                      <div class="trigger" style="display: inline-block;">
+                        <div class="cursor-pointer">
+                          <span class="text-lg font-black homa year-boxer" data-year=""></span>
+                          <span class="text-xs"> ▼ </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn-icon btn-next-month cursor-pointer">←</div>
+                </div>
+
+                <!-- <div id="popover_8jgds5901l" aria-hidden="false" tabindex="0" class="tooltip popover vue-popover-theme open" style="visibility: visible; position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(359px, 463px, 0px);" x-placement="bottom"> -->
+                  <div class="month-box">
+                    <div class="wrapper">
+                    
+                      <!-- <div class="tooltip-inner popover-inner" style="position: relative;"> -->
+                        <!-- <div> -->
+                          <div class="grid grid-cols-3 grid-rows-4 gap-1">
+                            <span class="text-sm p-1 cursor-pointer text-center rounded-sm hover:bg-gray-300">فروردین</span>
+                            <span class="text-sm p-1 cursor-pointer text-center rounded-sm hover:bg-gray-300">اردیبهشت</span>
+                            <span class="text-sm p-1 cursor-pointer text-center rounded-sm hover:bg-gray-300">خرداد</span>
+                            <span class="text-sm p-1 cursor-pointer text-center rounded-sm hover:bg-gray-300">تیر</span>
+                            <span class="text-sm p-1 cursor-pointer text-center rounded-sm hover:bg-gray-300">مرداد</span>
+                            <span class="text-sm p-1 cursor-pointer text-center rounded-sm hover:bg-gray-300">شهریور</span>
+                            <span class="text-sm p-1 cursor-pointer text-center rounded-sm hover:bg-gray-300">مهر</span>
+                            <span class="text-sm p-1 cursor-pointer text-center rounded-sm hover:bg-gray-300">آبان</span>
+                            <span class="text-sm p-1 cursor-pointer text-center rounded-sm hover:bg-gray-300">آذر</span>
+                            <span class="text-sm p-1 cursor-pointer text-center rounded-sm hover:bg-gray-300">دی</span>
+                            <span class="text-sm p-1 cursor-pointer text-center rounded-sm hover:bg-gray-300">بهمن</span>
+                            <span class="text-sm p-1 cursor-pointer text-center rounded-sm hover:bg-gray-300">اسفند</span>
+                          </div>
+                        <!-- </div> -->
+                          <!-- <div data-v-8859cc6c="" tabindex="-1" class="resize-observer">
+                            <object aria-hidden="true" tabindex="-1" type="text/html" data="about:blank"></object>
+                          </div> -->
+                      <!-- </div> -->
+                      <div class="tooltip-arrow popover-arrow"></div>
+                    </div>
+                  </div>
+                <!-- </div> -->
+                                  
+              </div>
+
+              <div class="calendar__date">
+                <div class="calendar_day_header grid-cols-7 text-gray">
+                  <div class="calendar__day">ش</div>
+                  <div class="calendar__day">ی</div>
+                  <div class="calendar__day">د</div>
+                  <div class="calendar__day">س</div>
+                  <div class="calendar__day">چ</div>
+                  <div class="calendar__day">پ</div>
+                  <div class="calendar__day">ج</div>
+                </div>
+                <div class="calendar_day_list grid-cols-7 grid-rows-6">
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="col-md-3">
+
+      </div>
     </div>
-    <div class="calendar__date">
-      <div class="calendar__day">ش</div>
-      <div class="calendar__day">ی</div>
-      <div class="calendar__day">د</div>
-      <div class="calendar__day">س</div>
-      <div class="calendar__day">چ</div>
-      <div class="calendar__day">پ</div>
-      <div class="calendar__day">ج</div>
-      <div class="calendar__number"></div>
-      <div class="calendar__number"></div>
-      <div class="calendar__number"></div>
-      <div class="calendar__number">1</div>
-      <div class="calendar__number">2</div>
-      <div class="calendar__number">3</div>
-      <div class="calendar__number">4</div>
-      <div class="calendar__number">5</div>
-      <div class="calendar__number">6</div>
-      <div class="calendar__number">7</div>
-      <div class="calendar__number">8</div>
-      <div class="calendar__number">9</div>
-      <div class="calendar__number">10</div>
-      <div class="calendar__number">11</div>
-      <div class="calendar__number">12</div>
-      <div class="calendar__number">13</div>
-      <div class="calendar__number">14</div>
-      <div class="calendar__number">15</div>
-      <div class="calendar__number">16</div>
-      <div class="calendar__number">17</div>
-      <div class="calendar__number calendar__number--current">18</div>
-      <div class="calendar__number">19</div>
-      <div class="calendar__number">20</div>
-      <div class="calendar__number">21</div>
-      <div class="calendar__number">22</div>
-      <div class="calendar__number">23</div>
-      <div class="calendar__number">24</div>
-      <div class="calendar__number">25</div>
-      <div class="calendar__number">26</div>
-      <div class="calendar__number">27</div>
-      <div class="calendar__number">28</div>
-      <div class="calendar__number">29</div>
-      <div class="calendar__number">30</div>
-    </div>
+
+
   </div>
 
-  <script src="assets/js/script.js"></script>
+  <script type="text/javascript" src="assets/js/script.js"></script>
+
 </body>
+
 </html>

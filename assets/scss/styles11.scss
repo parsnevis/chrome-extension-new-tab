@@ -101,3 +101,7 @@ body {
         color: #0c4128;
     }
 }
+
+.calendar__number:nth-child(7n) .calendar-box * {
+    color: red !important;
+}
