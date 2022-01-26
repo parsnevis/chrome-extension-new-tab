@@ -158,8 +158,85 @@ div.btn-icon {
 }
 
 
+.internet-notify {
+  position: relative;
+  display: flex;
+  max-width: 800px;
+  text-align: center;
+}
+
+.internet-notify-box {
+  display: flex;
+  overflow: hidden;
+  background: #fff;
+  align-items: flex-end;
+  justify-content: center;
+  border-radius: 2px;
+  align-self: flex-end;
+  box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+}
+
+.internet-notify-logo {
+  padding: 0 8px;
+  display: flex;
+  color: #fff;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  background-image: linear-gradient(45deg,#ff333a,#cc008c);
+  background-color: rgba(255,51,58,.9);
+  background-size: 150%;
+  align-items: center;
+}
 
 
+
+
+.internet-notify-logo svg {
+  pointer-events: none;
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  flex-shrink: 0;
+  fill: #fff;
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+  color: #fff;
+}
+
+.internet-notify-logo svg g {
+  transform-origin: 0px 0px;
+  pointer-events: none;
+  fill: #fff;
+  -webkit-tap-highlight-color: transparent;
+  color: #fff;
+}
+
+
+
+
+
+.internet-notify-text  {
+  display: flex;
+  overflow: hidden;
+  color: #1d2228;
+  flex-grow: 1;
+  font-size: 15px;
+  cursor: default;
+  line-height: 22px;
+  padding: 8px 20px 8px 12px;
+  pointer-events: auto;
+  text-align: center;
+}
+
+.internet-notify-text span {
+  color: #1d2228;
+  font-size: 15px;
+  cursor: default;
+  line-height: 22px;
+  pointer-events: auto;
+  text-align: center;
+}
 
 
 
