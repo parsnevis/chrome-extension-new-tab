@@ -89,10 +89,12 @@
   display: grid;
 }
 
-.grid-rows-6 {
-  grid-template-rows: repeat(6,minmax(0,1fr));
+.grid-cols-3 {
+  grid-template-columns: repeat(3,minmax(0,1fr));
 }
-
+.grid-cols-5 {
+  grid-template-columns: repeat(5,minmax(0,1fr));
+}
 .grid-cols-7 {
   grid-template-columns: repeat(7,minmax(0,1fr));
 }
@@ -100,8 +102,9 @@
 .grid-rows-4 {
   grid-template-rows: repeat(4,minmax(0,1fr));
 }
-.grid-cols-3 {
-  grid-template-columns: repeat(3,minmax(0,1fr));
+
+.grid-rows-6 {
+  grid-template-rows: repeat(6,minmax(0,1fr));
 }
 
 .cursor-pointer {
@@ -124,7 +127,7 @@ div.btn-icon {
 }
 
 
-.month-box .wrapper {
+.year-box .wrapper, .month-box .wrapper {
   border: 1px solid var(--color-sky-blue);
   border-radius: 5px;
   background-color: rgba(243,244,246,1);
@@ -133,7 +136,7 @@ div.btn-icon {
   position: absolute;
 }
 
-.month-box {
+.year-box, .month-box {
   position: relative;
   width: 100%;
   display: none;

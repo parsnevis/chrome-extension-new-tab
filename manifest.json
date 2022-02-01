@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
-  "name": "Persian Calendar",
+  "name": "asis",
   "description": "The free persian calendar from parsnevis.ir",
   "author": "Mostafa Shoa \u003Cmostafa.shoa@gmail.com>",
-  "version": "0.1",
+  "version": "0.0.1",
 
   "chrome_url_overrides" : {
     "newtab": "index.html"
